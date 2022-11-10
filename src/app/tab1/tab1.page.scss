@@ -1,0 +1,17 @@
+.logo{
+    width: 40px;
+    margin: auto;
+}
+
+.title-cards{
+    font-size: 1.750rem;
+}
+
+.sinopsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    line-clamp: 7; 
+    -webkit-box-orient: vertical;
+}

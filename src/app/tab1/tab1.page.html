@@ -1,0 +1,35 @@
+<ion-header [translucent]="true" mode="ios" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img class="logo" src="/assets/logo.webp"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios" class="ion-no-border">
+    <ion-toolbar>
+      <ion-title class="title-cards" size="large">Popular en Netflix</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col *ngFor="let movie of movies; let i=index" size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+        <ion-card>
+          <ion-card-subtitle class="ion-margin">
+              <span class="article-source-name">{{movie.release_date}}</span>
+          </ion-card-subtitle>
+          <ion-card-title class="ion-padding-horizontal ion-margin-bottom">
+              {{movie.title}}
+          </ion-card-title>
+          <ion-img src="{{'https://www.themoviedb.org/t/p/w600_and_h900_bestv2/'+movie.poster_path}}">
+          </ion-img>
+          <ion-card-content>
+            <p class="sinopsis">{{movie.overview}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
