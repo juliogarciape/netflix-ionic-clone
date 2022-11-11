@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Result } from '../interfaces';
 import { MoviesService } from '../services/movies.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { MoviesService } from '../services/movies.service';
 })
 export class Tab1Page implements OnInit{
 
-  public movies:any=[];
+  public movies:Result[]=[];
 
   constructor(private movieService: MoviesService) {}
 
@@ -16,7 +17,6 @@ export class Tab1Page implements OnInit{
     this.movieService.getTopHeadLines()
     .subscribe(data => {
       this.movies.push(...data);
-      console.log(data);
     })
   }
 
