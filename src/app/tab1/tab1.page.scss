@@ -1,17 +1,21 @@
-.logo{
+.logo {
     width: 40px;
     margin: auto;
 }
 
-.title-cards{
+.title-cards {
     font-size: 1.750rem;
 }
 
-.sinopsis{
+.sinopsis {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 7;
-    line-clamp: 7; 
+    line-clamp: 7;
     -webkit-box-orient: vertical;
+}
+
+.swiper-slide {
+    transition: .4s all;
 }

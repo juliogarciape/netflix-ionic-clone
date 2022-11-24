@@ -7,9 +7,17 @@ import { MoviesService } from '../services/movies.service';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
+
+
 export class Tab1Page implements OnInit{
 
   public movies:Result[]=[];
+  options = {
+    centeredSlides: false,
+    loop: false,
+    slidesPerView: 4,
+    grabCursor: true
+  };
 
   constructor(private movieService: MoviesService) {}
 
